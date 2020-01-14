@@ -55,7 +55,7 @@ stages:
       SECOND: 20
       OPERATION: 4
     steps:
-      - checkout: CalcRepo
+      - checkout: BashCalcRepo
       - task: Bash@3
         displayName: 'install bc'
         inputs:
