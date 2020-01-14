@@ -20,7 +20,7 @@ pool:
 stages:
 - stage: PreChecks
   jobs:
-  - job: pre-flight
+  - job: preflight
     pool:
       vmImage: 'ubuntu-latest'
     steps:
