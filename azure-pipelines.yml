@@ -18,6 +18,17 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
+- stage: PreChecks
+  jobs:
+  - job: pre-flight
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - checkout: none
+    - script: echo "Performing pre-flight checks"
+      displayName: 'Pre-Log'
+    - script: echo "All done checking pre-flight"
+      displayName: "Post-Log"
 - stage: CheckoutBothInParallel
   jobs:
   - job: windows
